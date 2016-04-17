@@ -87,7 +87,9 @@ window.onload = function () {
     function getDateStr(dat) {
         var y = dat.getFullYear();
         var m = dat.getMonth() + 1;
+        m = m < 10 ? '0' + m : m;
         var d = dat.getDate();
+        d = d < 10 ? '0' + d : d;
         return y + '-' + m + '-' + d;
     }
     
@@ -162,11 +164,22 @@ window.onload = function () {
                 month = parseInt(drawTd[i].getAttribute('data-month')) + 1;
                 day = drawTd[i].childNodes[0].textContent;
 
-                datStr = (dataValid ? year : '') + '-' +  // 年
+                if (dataValid) {
+                    datStr = year + '-' +
+                        (month < 10 ? '0' + month : month) + '-' +
+                        (day < 10 ? '0' + day : day);
+
+                    datArr.push(datStr);
+                } else {
+                    datArr.push('');
+                }
+
+                /*datStr = (dataValid ? year : '') + '-' +  // 年
                     (dataValid ? month : '') + '-' +  // 月
                     (dataValid ? day : '');   // 日
-                datArr.push(datStr);
+                datArr.push(datStr);*/
             }
+//            console.log(datArr);
             return datArr;
         };
 
@@ -275,6 +288,7 @@ window.onload = function () {
             var target = EventUtil.getTarget(e),
                 selectedInvalid = false,     // 标记为true时，不重绘数据；反则重绘数据
                 parent, isValid, datSelected, preDays, outOfDays,
+                m, d,
                 today = new Date();
 
             // 防止被链接带跑
@@ -285,9 +299,12 @@ window.onload = function () {
             // 当点击目标不为日期时，不重绘数据
             isValid = target && target.tagName.toUpperCase() === 'A' && parent.nodeName.toUpperCase() === 'TD';
 
+            m = parseInt(parent.getAttribute('data-month')) + 1;
+            d = target.textContent;
+
             datSelected = parent.getAttribute('data-year') + '-' +
-                (parseInt(parent.getAttribute('data-month')) + 1) + '-' +
-                target.textContent;
+                (m < 10 ? '0' + m : m) + '-' +
+                (d < 10 ? '0' + d : d);
 
             // 当点击日期小于今天，不重绘数据
             preDays = compareDate(datSelected, getDateStr(today)) < 0;

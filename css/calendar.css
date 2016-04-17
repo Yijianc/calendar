@@ -1,3 +1,7 @@
+body {
+    font-family: "Microsoft YaHei";
+}
+
 .hotel-list {
     width: 750px;
     height: 1334px;
@@ -164,9 +168,13 @@ td.price-down {
     padding-right: 40px;
 }
 
-#price-info td:first-child, #rate-info td:first-child {
+#price-info td:first-child, #price-info td:nth-child(2), #rate-info td:first-child {
     text-align: left;
     padding-left: 20px;
+}
+
+#price-info thead td:nth-child(2) {
+    padding-left: 40px;
 }
 
 #price-info thead td:first-child {
