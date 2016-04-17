@@ -1,0 +1,331 @@
+.hotel-list {
+    width: 750px;
+    height: 1334px;
+    font-size: 26px;
+    color: #d3cbb9;
+    background-image: url("../img/hotellist.jpg");
+    text-align: center;
+    margin: 50px auto;
+}
+
+.hotel-name {
+    height: 90px;
+    line-height: 90px;
+    padding-top: 30px;
+
+    font-size: 28px;
+    color: #fff;
+    background-color: #000;
+}
+
+.hotel-name > a {
+    font-size: 36px;
+    height: 90px;
+    line-height: 90px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hotel-list-prev {
+    margin-left: 30px;
+    float: left;
+}
+
+.hotel-list-more {
+    margin-right: 30px;
+    float: right;
+}
+
+.dot {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    margin: 8px 2px;
+
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.hotel-list-item {
+    display: inline-block;
+}
+
+.tabs {
+    background-color: #eeebe4;
+    padding: 30px 20px 0;
+}
+
+ul > li {
+    display: inline-block;
+}
+
+ul.tab-list > li {
+    width: 255px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+}
+
+ul.tab-list > li > a {
+    color: #d3cbb9;
+}
+
+ul.tab-list > li.selected > a {
+    color: #ad9456;
+}
+
+ul.tab-list > li.divider {
+    width: 2px;
+    height: 25px;
+    background-color: #d3cbb9;
+    margin: 0 50px;
+}
+
+ul.tab-list > li.selected {
+    background-color: #e4decf;
+
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+}
+
+div.tab-panel {
+    display: none;
+}
+
+div.tab-panel.selected {
+    display: block;
+}
+
+table {
+    width: 100%;
+    margin-top: 40px;
+    vertical-align: middle;
+}
+
+table > thead td {
+    font-size: 24px;
+    /*padding: 0 30px;*/
+    border-bottom: 14px solid #eeebe4;
+}
+
+table > tbody td {
+    height: 90px;
+    border-bottom: 10px solid #eeebe4;
+    background-color: #fff;
+    /*padding-left: 30px;*/
+
+    font-size: 26px;
+    color: #666;
+}
+
+table > tbody td:last-child {
+    width: 10px;
+}
+
+table p.date {
+    font-size: 18px;
+    color: #bababa;
+}
+
+td.room-left-sufficient {
+    background-color: lightgreen;
+}
+
+td.room-left-intensive {
+    background-color: orange;
+}
+
+td.room-left-almost {
+    background-color: red;
+}
+
+td.room-left-zero {
+    background-color: purple;
+}
+
+td.price-up {
+    color: #ff665a;
+}
+
+td.price-down {
+    color: #6ebb50;
+}
+
+#price-info td:nth-child(4), #rate-info td:nth-child(3) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+#price-info thead td:nth-child(4) {
+    padding-right: 40px;
+}
+
+#price-info td:first-child, #rate-info td:first-child {
+    text-align: left;
+    padding-left: 20px;
+}
+
+#price-info thead td:first-child {
+    padding-left: 60px;
+}
+
+td.stock-intensive {
+    color: orange;
+}
+
+td.stock-almost {
+    color: red;
+}
+
+td.stock-sufficient {
+    color: lightgreen;
+}
+
+td.stock-zero {
+    color: purple;
+}
+
+.icon {
+    display: inline-block;
+    float: none;
+    font-size: .7em;
+    margin-left: 10px;
+}
+
+.icon-arrowUp {
+    background-color: #ff665a;
+}
+
+.icon-arrowUp:after {
+    top: -.9em;
+    border-color: transparent transparent #ff665a transparent; /* #ff665a */
+}
+
+.icon-balance {
+    background-color: #fff;
+}
+
+.icon-balance:after {
+    top: -.9em;
+    border-color: transparent;
+}
+
+.icon-arrowDown {
+    top: .1em;
+    background-color: #6ebb50;
+}
+
+.icon-arrowDown:after {
+    top: .4em;
+    border-color: #6ebb50 transparent transparent transparent; /* #6ebb50 */
+}
+/*
+#rate-info .icon-arrowDown, #rate-info .icon-arrowUp {
+    left: .2em;
+}
+
+#rate-info .icon-arrowDown:after, #rate-info .icon-arrowUp:after {
+    left: -.2em;
+}*/
+
+.calendar {
+    width: 750px;
+    height: 757px;
+    background-image: url("../img/calendarbg.jpg");
+}
+
+.calendar > table th, .calendar > table td {
+    font-size: 26px;
+    border: none;
+    background-color: transparent;
+}
+
+.calendar > table td > a {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    color: #fff;
+    cursor: pointer;
+
+    border: 4px solid transparent;
+}
+
+.calendar > table td:last-child {
+    width: auto;
+}
+
+.calendar > table td > a.ui-state-active, .calendar > table td > a:hover {
+    background-color: #32373a;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border-color: #4f5052;
+}
+
+.calendar > table tr.ui-calendar-gap {
+    display: none;
+}
+
+.calendar > table th.ui-calendar-week-end {
+    opacity: .5;
+}
+
+table.ui-calendar-calendar {
+    width: 675px;
+    margin: 50px auto 0;
+}
+
+table.ui-calendar-calendar > thead span {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.ui-calendar-title {
+    color: #e6c9a9;
+    text-align: center;
+    display: inline-block;
+}
+
+.ui-calendar-header {
+    height: 108px;
+    border-top: 1px solid rgba(250, 250, 250, .2);
+    border-bottom: 1px solid rgba(250, 250, 250, .2);
+    line-height: 108px;
+
+    *zoom: 1;
+}
+
+.ui-calendar-header:before, .ui-calendar-header:after {
+    content: "";
+    display: block;
+}
+
+.ui-calendar-header:after {
+    clear: both;
+}
+
+.ui-calendar-header a {
+    height: 108px;
+    color: #fff;
+    opacity: .5;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    line-height: 108px;
+}
+
+.ui-calendar-prev {
+    float: left;
+    margin-left: 30px;
+}
+
+.ui-calendar-next {
+    float: right;
+    margin-right: 30px;
+}
+

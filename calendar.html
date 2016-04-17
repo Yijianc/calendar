@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/cikonss.css" rel="stylesheet">
+    <link href="css/calendar.css" rel="stylesheet">
+</head>
+<body>
+<div class="hotel-list central">
+    <div class="hotel-name">
+        <a class="hotel-list-prev" href="#">&lt;</a>
+        <p class="hotel-list-item">锦江之星-上海外滩经典酒店</p>
+        <a class="hotel-list-more" href="#"><span class="dot"></span><span class="dot"></span><span class="dot"></span></a>
+    </div>
+    <div class="calendar">
+    </div>
+    <div class="tabs">
+        <ul class="tab-list central">
+            <li class="selected"><a class="tab-control" href="#rate-info">房型预订率</a></li>
+            <li class="divider"></li>
+            <li><a class="tab-control" href="#price-info">房价调整信息</a></li>
+        </ul>
+        <div id="rate-info" class="tab-panel selected">
+            <table>
+                <thead>
+                <tr>
+                    <td>房型名称</td>
+                    <td>当前价格</td>
+                    <td>预定库存</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>单人房A</td>
+                    <td>￥170.00<span class="icon"><span class="icon-balance"></span></span></td>
+                    <td class="stock-sufficient">充足</td>
+                    <td class="room-left-sufficient"></td>
+                </tr>
+                <tr>
+                    <td>单人房B</td>
+                    <td class="price-up">￥158.00<span class="icon"><span class="icon-arrowUp"></span></span></td>
+                    <td class="stock-intensive">紧张</td>
+                    <td class="room-left-intensive"></td>
+                </tr>
+                <tr>
+                    <td>标准房A</td>
+                    <td class="price-down">￥230.00<span class="icon"><span class="icon-arrowDown"></span></span></td>
+                    <td class="stock-zero">已满房</td>
+                    <td class="room-left-zero"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="price-info" class="tab-panel">
+            <table>
+                <thead>
+                <tr>
+                    <td>时间</td>
+                    <td>房型</td>
+                    <td>当前价格</td>
+                    <td>涨跌</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <p class="time">14:03:09</p>
+                        <p class="date">2016/04/09</p>
+                    </td>
+                    <td>单人房A</td>
+                    <td>￥170.00<span class="icon"><span class="icon-balance"></span></span></td>
+                    <td>-</td>
+                    <td class="room-left-sufficient"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="time">16:43:06</p>
+                        <p class="date">2016/04/09</p>
+                    </td>
+                    <td>单人房B</td>
+                    <td class="price-up">￥158.00<span class="icon"><span class="icon-arrowUp"></span></span></td>
+                    <td class="price-up">+10.00</td>
+                    <td class="room-left-intensive"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="time">18:04:21</p>
+                        <p class="date">2016/04/09</p>
+                    </td>
+                    <td>标准房A</td>
+                    <td class="price-down">￥230.00<span class="icon"><span class="icon-arrowDown"></span></span></td>
+                    <td class="price-down">-15.00</td>
+                    <td class="room-left-zero"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<!--<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>-->
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/tabs.js"></script>
+<!--日历控件依赖js begin-->
+<script src="js/zepto.js"></script>
+<script src="js/touch.js"></script>
+<script src="js/highlight.js"></script>
+<script src="js/gmu.js"></script>
+<script src="js/event.js"></script>
+<script src="js/widget.js"></script>
+<script src="js/calendar.js"></script>
+<!--日历控件依赖js end-->
+<script>
+    (function($){
+        $(function(){
+            $('.calendar').calendar({
+                swipeable: true
+            });
+        });
+    })(Zepto);
+</script>
+<script src="js/EventUtil.js"></script>
+<script src="js/details.js"></script>
+</body>
+</html>
