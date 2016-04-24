@@ -3,13 +3,14 @@ body {
 }
 
 .hotel-list {
-    max-width: 750px;
+    min-width: 750px;
     height: 1334px;
     font-size: 26px;
     color: #d3cbb9;
     background-image: url("../img/hotellist.jpg");
+    background-size: cover;
     text-align: center;
-    margin: 50px auto;
+    margin: auto;
 }
 
 .hotel-name {
@@ -233,9 +234,10 @@ td.stock-zero {
 }
 
 .calendar {
-    max-width: 750px;
+    min-width: 750px;
     height: 757px;
     background-image: url("../img/calendarbg.jpg");
+    background-size: cover;
 }
 
 .calendar > table th, .calendar > table td {
@@ -276,7 +278,7 @@ td.stock-zero {
 }
 
 table.ui-calendar-calendar {
-    max-width: 675px;
+    min-width: 675px;
     margin: 50px auto 0;
 }
 
