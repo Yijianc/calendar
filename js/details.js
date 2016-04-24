@@ -97,7 +97,7 @@ window.onload = function () {
         var returnData = {};
         var dat = new Date();
         var datStr = '';
-        for (var i = 1; i < 62; i++) {
+        for (var i = 1; i < 366; i++) {
             datStr = getDateStr(dat);
             returnData[datStr] = Math.ceil(MIN + Math.random() * (MAX - MIN));
             dat.setDate(dat.getDate() + 1);
@@ -130,7 +130,6 @@ window.onload = function () {
             returnData[tmp] = new Hotel(bookedArr, priceArr);
         }
 
-//        console.log(returnData);
         return returnData;
     }
 
@@ -147,8 +146,7 @@ window.onload = function () {
     * 重绘表格
     */
     function renderHtml() {
-        var /*drawTd = document.querySelectorAll('.ui-calendar-calendar td'),
-            */roomInfo = initRoomDaily();
+        var roomInfo = initRoomDaily();
         
         // 抓取需要渲染的日期元素
         this.dateString = function () {
@@ -179,7 +177,7 @@ window.onload = function () {
                     (dataValid ? day : '');   // 日
                 datArr.push(datStr);*/
             }
-//            console.log(datArr);
+
             return datArr;
         };
 
@@ -309,8 +307,8 @@ window.onload = function () {
             // 当点击日期小于今天，不重绘数据
             preDays = compareDate(datSelected, getDateStr(today)) < 0;
 
-            // 超过当前61天是，不重绘数据
-            outOfDays = compareDate(datSelected, getDateStr(new Date(today.setDate(today.getDate() + 61)))) > 0;
+            // 超过当前365天，不重绘数据
+            outOfDays = compareDate(datSelected, getDateStr(new Date(today.setDate(today.getDate() + 365)))) > 0;
 
             if (!isValid || preDays || outOfDays) {
                 selectedInvalid = true;
