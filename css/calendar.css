@@ -8,7 +8,7 @@ body {
     font-size: 26px;
     color: #d3cbb9;
     background-image: url("../img/hotellist.jpg");
-    background-size: cover;
+    background-size: 100% 1334px;
     text-align: center;
     margin: auto;
 }
@@ -237,7 +237,7 @@ td.stock-zero {
     min-width: 750px;
     height: 757px;
     background-image: url("../img/calendarbg.jpg");
-    background-size: cover;
+    background-size: 100% 757px;
 }
 
 .calendar > table th, .calendar > table td {
