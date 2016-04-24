@@ -147,7 +147,7 @@ window.onload = function () {
     */
     function renderHtml() {
         var roomInfo = initRoomDaily();
-        
+        //console.log(roomInfo);
         // 抓取需要渲染的日期元素
         this.dateString = function () {
             var drawTd = document.querySelectorAll('.ui-calendar-calendar td');
@@ -215,6 +215,9 @@ window.onload = function () {
                 priceInfo = $('#price-info'),
                 selected = false;   // 标记为false，表示绘制房型预订率
 
+            // 酒店名称
+            document.querySelector('.hotel-list-item').innerText = roomInfo[date].name;
+
             this.selectedTab = function (selected) {
                 var html = '';
 
@@ -244,7 +247,7 @@ window.onload = function () {
                     }
                 };
 
-                console.log(roomDetails);
+                //console.log(roomDetails);
                 for (var i = 0, len = roomTypes.length; i < len; i++) {
                     var drawRoom = roomDetails[roomTypes[i]],
 
