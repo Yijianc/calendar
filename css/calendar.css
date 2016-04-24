@@ -3,7 +3,7 @@ body {
 }
 
 .hotel-list {
-    width: 750px;
+    max-width: 750px;
     height: 1334px;
     font-size: 26px;
     color: #d3cbb9;
@@ -231,17 +231,9 @@ td.stock-zero {
     top: .4em;
     border-color: #6ebb50 transparent transparent transparent; /* #6ebb50 */
 }
-/*
-#rate-info .icon-arrowDown, #rate-info .icon-arrowUp {
-    left: .2em;
-}
-
-#rate-info .icon-arrowDown:after, #rate-info .icon-arrowUp:after {
-    left: -.2em;
-}*/
 
 .calendar {
-    width: 750px;
+    max-width: 750px;
     height: 757px;
     background-image: url("../img/calendarbg.jpg");
 }
@@ -284,7 +276,7 @@ td.stock-zero {
 }
 
 table.ui-calendar-calendar {
-    width: 675px;
+    max-width: 675px;
     margin: 50px auto 0;
 }
 

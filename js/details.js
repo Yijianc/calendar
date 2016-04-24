@@ -158,7 +158,7 @@ window.onload = function () {
             for (var i = 0, len = drawTd.length; i < len; i++) {
                 var dataValid = drawTd[i].hasAttribute('data-year'),
                     datStr = '',
-                    day, month, year;;
+                    day, month, year;
 
                 year = drawTd[i].getAttribute('data-year');
                 month = parseInt(drawTd[i].getAttribute('data-month')) + 1;
